@@ -27,14 +27,15 @@ button {
 }
 
 .game-shell {
-  width: min(100%, 960px);
+  width: min(100%, calc(133.333vh - 13.333rem));
+  width: min(100%, calc(133.333dvh - 13.333rem));
   display: grid;
   justify-items: center;
   gap: 0.75rem;
 }
 
 .game-frame {
-  width: min(100%, 800px);
+  width: 100%;
   aspect-ratio: 4 / 3;
   background: #000;
   outline: 2px solid #555;
@@ -52,7 +53,7 @@ button {
 }
 
 .game-controls {
-  width: min(100%, 800px);
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 0.75rem;
@@ -74,6 +75,11 @@ button {
 .game-controls button:focus-visible {
   color: #000;
   background: #ffe600;
+}
+
+.game-controls button:disabled {
+  opacity: 0.55;
+  cursor: default;
 }
 
 .game-help {
