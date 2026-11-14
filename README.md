@@ -16,4 +16,4 @@ Open the URL shown by Vite (normally `http://127.0.0.1:5173`). Run `just check` 
 
 ## Controls
 
-Use **Enter** to select or start a kick, then **Space** to swing. Menus and kick controls are also tappable on touch screens.
+Use **Enter** to select a menu item. During play, press **Enter** to pull back the leg, then press **Space** at the right moment to kick. Space cannot kick until the leg is pulled back. Menus and kick controls are also tappable on touch screens.
