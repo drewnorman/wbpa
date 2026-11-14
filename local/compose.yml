@@ -1,0 +1,25 @@
+name: wbpa
+
+services:
+  site:
+    build:
+      context: ..
+      dockerfile: local/Containerfile
+    container_name: wbpa-site
+    working_dir: /workspace
+    volumes:
+      - ${PWD}:/workspace:Z
+    expose:
+      - '5173'
+    networks:
+      - local-proxy
+    labels:
+      traefik.enable: 'true'
+      traefik.docker.network: local-proxy
+      traefik.http.routers.wbpa-site.entrypoints: web
+      traefik.http.routers.wbpa-site.rule: Host(`site.wbpa.localhost`)
+      traefik.http.services.wbpa-site.loadbalancer.server.port: '5173'
+
+networks:
+  local-proxy:
+    external: true

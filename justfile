@@ -1,5 +1,7 @@
 set shell := ["bash", "-euo", "pipefail", "-c"]
 
+compose := "podman-compose -f local/compose.yml"
+
 default:
   @just --list
 
@@ -8,7 +10,16 @@ bootstrap:
   @just install-hooks
 
 dev:
+  @{{ compose }} up --build
+
+dev-direct:
   @corepack yarn dev
+
+dev-down:
+  @{{ compose }} down
+
+dev-logs:
+  @{{ compose }} logs -f site
 
 build:
   @corepack yarn build
