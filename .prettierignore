@@ -1,0 +1,5 @@
+node_modules/
+dist/
+coverage/
+legacy/java/
+legacy/audio-source/

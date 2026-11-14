@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.direnv/
+.yarn/cache/
+.yarn/install-state.gz
+.vite/
+coverage/
+*.local
