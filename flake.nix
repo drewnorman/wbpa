@@ -23,6 +23,8 @@
               pkgs.podman
               pkgs.podman-compose
               pkgs.ffmpeg
+              pkgs.imagemagick
+              pkgs.python3
               pkgs.jdk21
               pkgs.nixfmt
             ];

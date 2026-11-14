@@ -16,6 +16,8 @@ Open [site.wbpa.localhost](http://site.wbpa.localhost). The `just dev` command b
 
 Run `just check` before committing. `just bootstrap` installs dependencies from `yarn.lock` and enables the local `commit-msg` hook, which enforces conventional commit messages. Use `just format` to apply Prettier formatting, `just build` for a production bundle, and `just preview` to inspect that bundle locally.
 
+`just build-art` regenerates the corrected credits and shadowed end screens from the archived PNGs. The in-game score and kicks labels and the digits use the original art.
+
 ## Controls
 
 Use **Enter** to select a menu item. During play, press **Enter** to pull back the leg, then press **Space** at the right moment to kick. Space cannot kick until the leg is pulled back. Menus and kick controls are also tappable on touch screens.

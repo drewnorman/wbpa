@@ -24,6 +24,9 @@ dev-logs:
 build:
   @corepack yarn build
 
+build-art:
+  @python scripts/build-screen-art.py
+
 preview:
   @corepack yarn preview
 
