@@ -12,7 +12,9 @@ just bootstrap
 just dev
 ```
 
-Open the URL shown by Vite (normally `http://127.0.0.1:5173`). Run `just check` before committing. `just bootstrap` installs dependencies from `yarn.lock` and enables the local `commit-msg` hook, which enforces conventional commit messages. Use `just format` to apply Prettier formatting, `just build` for a production bundle, and `just preview` to inspect that bundle locally.
+Open [site.wbpa.localhost](http://site.wbpa.localhost). The `just dev` command builds and runs the Vite container through the existing local Traefik service on the `local-proxy` Podman network. Use `just dev-down` to stop it, or `just dev-logs` to follow its logs. `just dev-direct` runs Vite at `http://127.0.0.1:5173` without Traefik.
+
+Run `just check` before committing. `just bootstrap` installs dependencies from `yarn.lock` and enables the local `commit-msg` hook, which enforces conventional commit messages. Use `just format` to apply Prettier formatting, `just build` for a production bundle, and `just preview` to inspect that bundle locally.
 
 ## Controls
 

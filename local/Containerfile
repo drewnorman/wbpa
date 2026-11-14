@@ -1,0 +1,6 @@
+FROM docker.io/library/node:24-bookworm-slim
+
+WORKDIR /workspace
+EXPOSE 5173
+
+CMD ["node_modules/.bin/vite", "--host", "0.0.0.0", "--port", "5173", "--strictPort"]

@@ -20,6 +20,8 @@
               pkgs.corepack
               pkgs.just
               pkgs.git
+              pkgs.podman
+              pkgs.podman-compose
               pkgs.ffmpeg
               pkgs.jdk21
               pkgs.nixfmt
