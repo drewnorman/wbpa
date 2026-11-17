@@ -5,7 +5,6 @@
 
 ### Features
 
-* **app:** polish site experience ([97dcc12](https://github.com/drewnorman/wbpa/commit/97dcc12638da636c45eca0f25baeb769c7ebc2c1))
 * **app:** simplify entry and restore WBPA branding ([faf292a](https://github.com/drewnorman/wbpa/commit/faf292a1a06c1db8afe91813591324f6eec92c54))
 
 
