@@ -33,7 +33,7 @@ export async function startClassicGame(mount: HTMLElement): Promise<void> {
         <div class="game-frame" tabindex="0" role="application" aria-label="Widener's Baby Punting Adventure"></div>
         <div class="game-controls">
           <button type="button" data-action="primary">Skip intro</button>
-          <button type="button" data-action="secondary">Skip intro</button>
+          <button type="button" data-action="secondary" hidden>Skip intro</button>
         </div>
         <p class="game-help">Use Enter and Space, or the buttons below the game.</p>
         <p class="game-status" aria-live="polite"></p>
@@ -275,6 +275,7 @@ export async function startClassicGame(mount: HTMLElement): Promise<void> {
     requestAnimationFrame((nextTime) => frameLoop(nextTime));
   }
 
+  updateControls();
   frame.appendChild(await renderer.init());
   primary.addEventListener('click', () => {
     audio.unlock();
@@ -315,6 +316,5 @@ export async function startClassicGame(mount: HTMLElement): Promise<void> {
     if (event.code === 'Enter' && !event.repeat) primaryAction();
     if (event.code === 'Space' && !event.repeat) secondaryAction();
   });
-  updateControls();
   requestAnimationFrame((time) => frameLoop(time));
 }
