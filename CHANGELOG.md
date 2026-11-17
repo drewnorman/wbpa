@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/drewnorman/wbpa/compare/v0.2.0...v0.3.0) (2026-11-17)
+
+
+### Features
+
+* **app:** simplify entry and restore WBPA branding ([faf292a](https://github.com/drewnorman/wbpa/commit/faf292a1a06c1db8afe91813591324f6eec92c54))
+
+
+### Bug Fixes
+
+* **game:** prevent duplicate intro control on load ([c6379e1](https://github.com/drewnorman/wbpa/commit/c6379e13a2993dae50f5f2b54846243c1066eb6c))
+
 ## [0.2.0](https://github.com/drewnorman/wbpa/compare/v0.1.0...v0.2.0) (2026-11-17)
 
 
