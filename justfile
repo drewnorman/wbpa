@@ -34,11 +34,7 @@ format:
   @corepack yarn format
 
 check:
-  @corepack yarn format:check
-  @corepack yarn lint
-  @corepack yarn typecheck
-  @corepack yarn test
-  @corepack yarn build
+  @corepack yarn check
 
 install-hooks:
   @if [ "$(git config --local --get core.hooksPath || true)" != ".githooks" ]; then git config core.hooksPath .githooks; fi

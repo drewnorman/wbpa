@@ -8,12 +8,15 @@
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
+    "check": "yarn format:check && yarn lint && yarn typecheck && yarn test && yarn build",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "commitlint": "commitlint"
+    "commitlint": "commitlint",
+    "firebase:preview": "firebase hosting:channel:deploy preview --expires 7d",
+    "firebase:deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
     "pixi.js": "^8.0.0",
@@ -24,6 +27,7 @@
     "@commitlint/config-conventional": "^21.0.2",
     "@eslint/js": "^10.0.1",
     "eslint": "^10.9.1",
+    "firebase-tools": "^14.5.1",
     "globals": "^16.0.0",
     "prettier": "^3.9.6",
     "typescript": "^5.9.0",
