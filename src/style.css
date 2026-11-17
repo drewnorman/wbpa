@@ -12,7 +12,19 @@
 body {
   min-width: 280px;
   min-height: 100vh;
+  min-height: 100dvh;
   margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 button {
@@ -21,6 +33,7 @@ button {
 
 #app {
   min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   place-items: center;
   padding: 1rem;
@@ -70,11 +83,6 @@ button {
 .entry-form {
   display: grid;
   gap: 0.65rem;
-  margin-top: 2rem;
-}
-
-.entry-form label {
-  font-weight: 700;
 }
 
 .entry-form input {
@@ -112,10 +120,17 @@ button {
 }
 
 .entry-error {
-  min-height: 1.25rem;
   margin: 0;
   color: #ff9898;
   font-size: 0.9rem;
+}
+
+.entry-error:empty {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
 }
 
 .mode-list {
@@ -288,7 +303,6 @@ button {
 
 @media (max-width: 480px) {
   #app {
-    align-content: start;
     padding: 0.5rem;
   }
 
@@ -303,9 +317,5 @@ button {
 
   .mode-card {
     min-height: 12rem;
-  }
-
-  .classic-mount {
-    margin-top: 3.25rem;
   }
 }

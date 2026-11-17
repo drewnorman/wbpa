@@ -10,14 +10,10 @@ const app = document.querySelector<HTMLElement>('#app')!;
 if (!app) throw new Error('The app mount point is missing.');
 
 function showGate(): void {
-  document.title = 'Private game';
   app.innerHTML = `
-    <main class="entry-panel" aria-labelledby="entry-title">
-      <p class="entry-eyebrow">Private game</p>
-      <h1 id="entry-title">Invitation required</h1>
-      <p class="entry-copy">Enter the shared password to continue.</p>
+    <main class="entry-panel" aria-label="Password entry">
       <form class="entry-form">
-        <label for="password">Password</label>
+        <label class="visually-hidden" for="password">Password</label>
         <input id="password" name="password" type="password" autocomplete="current-password" required />
         <button type="submit">Continue</button>
         <p class="entry-error" role="alert" aria-live="polite"></p>
@@ -50,7 +46,6 @@ function showGate(): void {
 }
 
 function showLauncher(): void {
-  document.title = "Widener's Baby Punting Adventure";
   app.innerHTML = `
     <main class="launcher" aria-labelledby="launcher-title">
       <div class="launcher-heading">
@@ -84,7 +79,6 @@ function showLauncher(): void {
 }
 
 async function showClassic(): Promise<void> {
-  document.title = "Classic | Widener's Baby Punting Adventure";
   app.innerHTML = `
     <a class="classic-back" href="/">← Modes</a>
     <div class="classic-mount"></div>
