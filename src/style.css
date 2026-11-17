@@ -26,6 +26,196 @@ button {
   padding: 1rem;
 }
 
+.entry-panel,
+.launcher {
+  width: min(100%, 48rem);
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid #5d5517;
+  background: #191919;
+  box-shadow: 0 1.25rem 4rem #0008;
+}
+
+.entry-panel {
+  max-width: 29rem;
+}
+
+.entry-eyebrow,
+.mode-number {
+  margin: 0;
+  color: #aaa;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.entry-panel h1,
+.launcher h1 {
+  margin: 0.65rem 0 0;
+  font-size: clamp(1.8rem, 5vw, 2.7rem);
+  line-height: 1.12;
+}
+
+.entry-copy,
+.launcher-heading > p:last-child {
+  margin: 1rem 0 0;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.entry-panel a {
+  color: #ffe600;
+}
+
+.entry-form {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 2rem;
+}
+
+.entry-form label {
+  font-weight: 700;
+}
+
+.entry-form input {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.65rem 0.8rem;
+  border: 2px solid #777;
+  border-radius: 0.35rem;
+  color: #fff;
+  background: #101010;
+  font: inherit;
+}
+
+.entry-form input:focus-visible {
+  outline: 2px solid #ffe600;
+  outline-offset: 2px;
+}
+
+.entry-form button,
+.mode-card-disabled button {
+  min-height: 3rem;
+  margin-top: 0.4rem;
+  padding: 0.65rem 1rem;
+  border: 2px solid #ffe600;
+  border-radius: 0.35rem;
+  color: #111;
+  background: #ffe600;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.entry-form button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.entry-error {
+  min-height: 1.25rem;
+  margin: 0;
+  color: #ff9898;
+  font-size: 0.9rem;
+}
+
+.mode-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.mode-card {
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 2px solid #5d5517;
+  color: #ddd;
+  background: #111;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.mode-card strong {
+  color: #ffe600;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.mode-card-active {
+  border-color: #ffe600;
+}
+
+.mode-card-active:hover,
+.mode-card-active:focus-visible {
+  outline: 2px solid #ffe600;
+  outline-offset: 3px;
+  background: #242109;
+}
+
+.mode-cta {
+  margin-top: auto;
+  color: #ffe600;
+  font-weight: 700;
+}
+
+.mode-card-disabled {
+  opacity: 0.62;
+}
+
+.mode-card-disabled button {
+  margin-top: auto;
+  border-color: #777;
+  color: #aaa;
+  background: #222;
+  cursor: not-allowed;
+}
+
+.text-button {
+  margin-top: 1.5rem;
+  padding: 0;
+  border: 0;
+  color: #ccc;
+  background: transparent;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.text-button:hover,
+.text-button:focus-visible {
+  color: #ffe600;
+}
+
+.classic-mount {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.classic-back {
+  position: fixed;
+  z-index: 1;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #ffe600;
+  border-radius: 0.3rem;
+  color: #ffe600;
+  background: #111;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.classic-back:hover,
+.classic-back:focus-visible {
+  color: #111;
+  background: #ffe600;
+}
+
 .game-shell {
   width: min(100%, calc(133.333vh - 13.333rem));
   width: min(100%, calc(133.333dvh - 13.333rem));
@@ -105,5 +295,17 @@ button {
   .game-controls button {
     flex: 1;
     min-width: 0;
+  }
+
+  .mode-list {
+    grid-template-columns: 1fr;
+  }
+
+  .mode-card {
+    min-height: 12rem;
+  }
+
+  .classic-mount {
+    margin-top: 3.25rem;
   }
 }
