@@ -3,3 +3,5 @@ dist/
 coverage/
 legacy/java/
 legacy/audio-source/
+.playwright-cli/
+.firebase/

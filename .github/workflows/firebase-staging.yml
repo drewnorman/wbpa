@@ -1,0 +1,30 @@
+name: Firebase Staging
+
+on:
+  push:
+    tags:
+      - 'v*-rc*'
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  staging:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: corepack enable
+      - run: corepack yarn install --immutable
+      - run: corepack yarn check
+      - uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
+          service_account: ${{ secrets.GCP_SA_EMAIL }}
+      - name: Deploy staging channel
+        env:
+          PROJECT_ID: ${{ vars.FIREBASE_PROJECT_ID }}
+        run: corepack yarn firebase hosting:channel:deploy staging --project "${PROJECT_ID}" --expires 7d
